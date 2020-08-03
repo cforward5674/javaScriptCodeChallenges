@@ -58,7 +58,6 @@ else  {
 console.log(avgScore);
 }
 
-document.getElementById('#challenge2').innerHTML=avgScore();
 
   /* 4.  EXTRA: Mary also plays basketball, and her team scored 
   97, 134 and 105 points.  Like before, log the average winner
@@ -67,3 +66,45 @@ document.getElementById('#challenge2').innerHTML=avgScore();
    
    /* 5. Change the scores to generate different winners, keeping in 
    mind there might be draws */
+
+/*----------------- CODE CHALLENGE 3 ----------------*/
+/* john and his family went on a holiday and went to 3 different 
+restaurants.  The bills were $124, $48, and $268.
+To tip the waiter a fair amount, John creaated a simple tip 
+calculator (as a function).  He likes to tip 20% of the bill when
+the bill is between $50 and $200, and 10% if the bill is more than
+$200.
+In the end, John would like to have 2 arrays:  */
+
+// 1. Containing all three tips (one for each bill
+
+function tipCalculator(bill)  {
+  var percentage;
+  if (bill < 50)  {
+     percentage = .20;
+  } else if (bill >= 50 && bill < 200)  {
+    percentage = .15;
+  }  else {
+    percentage = .10;
+  }
+  return percentage * bill;
+}
+ 
+console.log(tipCalculator(225)); 
+ 
+
+// 2. Containing all three final paid amounts (bill + tip ).
+var billAmount = [124, 48, 268];
+
+var tips = [tipCalculator(billAmount[0]),
+            tipCalculator(billAmount[1]),
+            tipCalculator(billAmount[2])];
+
+console.log(tips);
+
+var finalBill = [billAmount[0] + tips[0],
+                 billAmount[1] + tips[1],
+                 billAmount[2] + tips[2]
+];
+console.log(finalBill);
+
