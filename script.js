@@ -140,3 +140,18 @@ if (john.bmi > mark.bmi) {
 } else {
   console.log("Mark and John's BMI's are the same.");
 }
+
+/*----------------- CODE CHALLENGE 4 ----------------*/
+for(var i = -10; i < 10; i++)  {
+  console.log(i);
+}
+
+for (var i = 0; i < 5; i++)  {
+  console.log(billAmount);
+}
+var stan = ['stan', 'smith', 2005, 'programmer', false];
+
+for(var i = 0; i < stan.length; i++)  {
+  console.log(stan[3]);
+}
+
